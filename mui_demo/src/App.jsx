@@ -7,10 +7,10 @@ import Results from './sections/Results';
 
 export default function App() {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth={false}>
       <SearchBar />
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={3}>
+        <Grid item xs={12} sm={3}>s
           <Filters />
         </Grid>
         <Grid item xs={12} sm={9}>
