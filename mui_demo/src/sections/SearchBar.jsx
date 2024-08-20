@@ -10,11 +10,13 @@ import Button from '@mui/material/Button';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
-  borderRadius: theme.shape.borderRadius,
+  borderRadius: '50px',
+  
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
+
   marginRight: theme.spacing(2),
   marginLeft: 0,
   width: '100%',
@@ -22,6 +24,7 @@ const Search = styled('div')(({ theme }) => ({
     marginLeft: theme.spacing(3),
     width: 'auto',
   },
+
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -48,11 +51,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+
 export default function SearchBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" justifyContent="space-between">
         <Toolbar>
+
           <Typography
             variant="h6"
             noWrap

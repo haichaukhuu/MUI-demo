@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 const style = {
   py: 0,
   width: '100%',
+  height: '100%',
   maxWidth: 360,
   border: '1px solid',
   borderColor: 'divider',
