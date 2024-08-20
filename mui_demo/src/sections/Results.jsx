@@ -37,7 +37,7 @@ function Results() {
         ))}
       </Grid>
     </div>
-  );
+  );         
 }
 
 export default Results;

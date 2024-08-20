@@ -10,7 +10,7 @@ export default function App() {
     <Container maxWidth={false}>
       <SearchBar />
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={3}>s
+        <Grid item xs={12} sm={3}>
           <Filters />
         </Grid>
         <Grid item xs={12} sm={9}>

@@ -5,7 +5,8 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-// import SearchIcon from '@mui/icons-material/Search';
+import SearchIcon from '@mui/icons-material/Search';
+import Button from '@mui/material/Button';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -62,14 +63,16 @@ export default function SearchBar() {
           </Typography>
 
           <Search>
-            {/* <SearchIconWrapper>
+            <SearchIconWrapper>
               <SearchIcon />
-            </SearchIconWrapper> */}
+            </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Search…"
+              placeholder="Enter text query…"
               inputProps={{ 'aria-label': 'search' }}
             />
           </Search>
+
+          <Button variant="contained">Search</Button>
         </Toolbar>
       </AppBar>
     </Box>
