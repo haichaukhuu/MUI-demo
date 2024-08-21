@@ -4,9 +4,9 @@ import FrameResult from '../components/FrameResult';
 
 function Results() {
   const results = [
-    { id: 1, frameNo: 126, videoNo: 'V001', timestamp: '00:00:05', thumbnail: '/path/to/image1.png' },
-    { id: 2, frameNo: 127, videoNo: 'V002', timestamp: '00:00:10', thumbnail: '/path/to/image2.png' },
-    { id: 3, frameNo: 122, videoNo: 'V008', timestamp: '00:00:10', thumbnail: '/path/to/image3.png' },
+    { rank: '1', videoNo: 'V001', timestamp: '00:00:05', thumbnail: '/image1.png', simScore: '0.9', objects: 'santa claus' },
+    { rank: '2', videoNo: 'V002', timestamp: '00:00:10', thumbnail: '/image2.png', simScore: '0.9', objects: 'santa claus' },
+    { rank: '3', videoNo: 'V008', timestamp: '00:00:10', thumbnail: '/image3.png', simScore: '0.9', objects: 'santa claus' },
 
   ];
 
@@ -16,12 +16,14 @@ function Results() {
       <Typography variant="subtitle1">Filters applied:</Typography>
       <Grid container spacing={2}>
         {results.map((result) => (
-          <Grid item xs={12} sm={6} md={4} key={result.id}>
+          <Grid item xs={12} sm={6} md={4} key={result.rank}>
             <FrameResult
-              frameNo={result.frameNo}
+              rank={result.rank}
               videoNo={result.videoNo}
               timestamp={result.timestamp}
               thumbnail={result.thumbnail}
+              simScore={result.simScore}
+              objects={result.objects}
             />
           </Grid>
         ))}

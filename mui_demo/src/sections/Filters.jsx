@@ -17,32 +17,28 @@ const style = {
 
 export default function Filters() {
   return (
-    <List sx={style}>
+    <List sx={style} maxHeight = {false}>
       <Typography variant="h4">
         Filters:
       </Typography>
 
       <ListItem>
-        <ListItemText primary="filter 1" />
+        <ListItemText primary="Location/Place:" />
       </ListItem>
       <Divider component="li" />
 
 
       <ListItem>
-        <ListItemText primary="filter 2" />
+        <ListItemText primary="Objects:" />
       </ListItem>
       <Divider component="li" />
 
 
       <ListItem>
-        <ListItemText primary="filter 3" />
+        <ListItemText primary="Colors:" />
       </ListItem>
       <Divider component="li" />
 
-
-      <ListItem>
-        <ListItemText primary="filter 4" />
-      </ListItem>
     </List>
   );
 }
