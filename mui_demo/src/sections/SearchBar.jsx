@@ -11,20 +11,14 @@ import Button from '@mui/material/Button';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: '50px',
-  
   backgroundColor: alpha(theme.palette.common.white, 0.15),
   '&:hover': {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
-
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
   width: '100%',
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
     width: 'auto',
   },
-
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
@@ -41,7 +35,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -51,13 +44,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-
 export default function SearchBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" justifyContent="space-between">
-        <Toolbar>
-
+    <Box sx={{ flexGrow: 1}}>
+      <AppBar position="fixed">
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <Typography
             variant="h6"
             noWrap
@@ -67,17 +58,20 @@ export default function SearchBar() {
             Video Browser
           </Typography>
 
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Enter text query…"
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </Search>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexGrow: 1 }}>
+            <Search sx={{ marginRight: 2, width: '100%' }}>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Enter text query…"
+                inputProps={{ 'aria-label': 'search' }}
+              />
+            </Search>
 
-          <Button variant="contained">Search</Button>
+            <Button sx={{borderRadius: '50px'}} variant="contained">Search</Button>
+
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
