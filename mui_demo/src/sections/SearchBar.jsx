@@ -16,8 +16,13 @@ const Search = styled('div')(({ theme }) => ({
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   width: '100%',
+  maxWidth: '400px', 
   [theme.breakpoints.up('sm')]: {
     width: 'auto',
+    maxWidth: '600px', 
+  },
+  [theme.breakpoints.up('md')]: {
+    maxWidth: '800px', 
   },
 }));
 
