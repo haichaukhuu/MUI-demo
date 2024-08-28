@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import { Container, Grid, Typography } from '@mui/material';
 import SearchBar from './sections/SearchBar';
